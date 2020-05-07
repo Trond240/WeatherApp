@@ -2,7 +2,7 @@
 
 ## Weather APP
 
-![image](https://user-images.githubusercontent.com/49410633/81349644-9dbde100-907d-11ea-9546-d580f490918d.png)
+![image](https://user-images.githubusercontent.com/49410633/81353844-5dfbf700-9087-11ea-8ea6-2861ed3ca597.png)
 
 
 ### `npm start`
