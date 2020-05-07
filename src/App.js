@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { fetchCurrentLocation, fetchDailyCast } from '/Users/trondmakonese/mod_3/weatherApp/weatherapp/src/apiCalls.js';
+import { fetchCurrentLocation, fetchDailyCast, searchForLocation } from '/Users/trondmakonese/mod_3/weatherApp/weatherapp/src/apiCalls.js';
 import { CurrentLocation } from '/Users/trondmakonese/mod_3/weatherApp/weatherapp/src/currentLocation/currentLocation.js';
 import { NavBar } from '/Users/trondmakonese/mod_3/weatherApp/weatherapp/src/navBar/navBar.js';
 import { WeatherContainer } from '/Users/trondmakonese/mod_3/weatherApp/weatherapp/src/weatherContainer/weatherContainer.js';
@@ -32,6 +32,11 @@ class App extends Component {
     .catch(err => console.log(err))
   }
 
+  searchForCity(cityName) {
+    searchForLocation(cityName)
+    .then(data => console.log(data))
+  }
+
   render() {
     console.log(this.state.dailyForcast)
     let currentLocation 
@@ -45,7 +50,7 @@ class App extends Component {
     }
     return (
       <main className='main-app'>
-        <NavBar />
+        <NavBar/>
         <div className='weather-div'>
           {currentLocation}
           {weatherCard}

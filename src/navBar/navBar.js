@@ -1,7 +1,7 @@
 import React from 'react';
 import '/Users/trondmakonese/mod_3/weatherApp/weatherapp/src/navBar/navBar.css';
 
-export const NavBar = () => {
+export const NavBar = (props) => {
     return(
         <nav className='navbar'>
             <h1 className='heading'>Welcome! Todays Forcast</h1> 
