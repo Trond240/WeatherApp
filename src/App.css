@@ -1,0 +1,17 @@
+.main-app {
+  background-color: #87ceeb;
+  /* background-image: url("weather-background.jpg"); */
+  height: 1000px;
+}
+
+.App {
+  text-align: center;
+}
+
+.weather-div {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px;
+  height: 600px;
+}
+
