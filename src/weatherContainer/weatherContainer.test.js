@@ -6,29 +6,14 @@ import '@testing-library/jest-dom';
 describe('WeatherCard', () => {
     it('renders text that we expect', () => {
     const { getByText } = render(<WeatherContainer
-            weatherCard={[{date: '1588875536', temp: '292.54', low: '290.93', weather: []}]}
+            weatherCard={[{date: '1588875536', temp: '292.54', low: '290.93', weather: [{icon: '10d', description: 'cloudy rain'}]}, {date: '1588875536', temp: '292.54', low: '290.93', weather: [{icon: '10d', description: 'cloudy rain'}]}, {date: '1588875536', temp: '292.54', low: '290.93', weather: [{icon: '10d', description: 'cloudy'}]}]}
         />
         );
 
-        const dateEl = getByText('')
-        expect(dateEl).toBeInTheDocument();
+        const descriptionEl = getByText('cloudy rain')
+        expect(descriptionEl).toBeInTheDocument();
+
+        const description2El = getByText('cloudy')
+        expect(description2El).toBeInTheDocument();
     })
 })
-// describe('weather container', () => {
-//     it('when the App loads, we should see an weather for the week', async () => {
-//         fetchDailyCast.mockResolvedValueOnce([
-//         {date: 1589047244, high: 289.95, low: 281.63, weather: Array(1)},
-//         {date: 1589047233, high: 281.95, low: 271.63, weather: Array(1)},
-//         {date: 1589047288, high: 189.95, low: 181.63, weather: Array(1)},
-//         ]);
-
-//         const { getByText } = render(<WeatherContainer />);
-
-//         const weatherContainer = getByText('WeatherCard Component');
-
-//         const card = await waitFor(() => getByText('1589047244'));
-
-//         expect(weatherContainer).toBeInTheDocument();
-//         expect(card).toBeInTheDocument();
-//     });
-// });

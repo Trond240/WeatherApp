@@ -10,7 +10,6 @@ describe('CurrentLocation', () => {
         />
         );
 
-
         const descriptionEl = getByText('cloudy rain')
         expect(descriptionEl).toBeInTheDocument();
 
