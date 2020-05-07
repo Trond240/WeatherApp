@@ -33,11 +33,12 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.dailyForcast)
     let currentLocation 
     let weatherCard
     if(!this.state.defaultDay.coord && this.state.dailyForcast.length === 0) {
-      currentLocation = <p>LOADING</p>
-      weatherCard = <p>LOADING</p>
+      currentLocation = <h1>....LOADING</h1>
+      weatherCard = <h1>....LOADING</h1>
     } else {
       currentLocation =  <CurrentLocation currentLocation={this.state.defaultDay}/>
       weatherCard = <WeatherContainer weatherCard={this.state.dailyForcast}/>
