@@ -50,7 +50,7 @@ class App extends Component {
     }
     return (
       <main className='main-app'>
-        <NavBar/>
+        <NavBar currentLocation={this.state.defaultDay}/>
         <div className='weather-div'>
           {currentLocation}
           {weatherCard}
