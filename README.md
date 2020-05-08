@@ -1,6 +1,6 @@
-
-
 ## Weather APP
+
+### It’s important to know what Mother Nature is going to throw at you each day – what if you wear flip flops because it’s sunny and 65 degrees in the morning and then it snows all afternoon (this is Colorado, after all).
 
 ![image](https://user-images.githubusercontent.com/49410633/81353844-5dfbf700-9087-11ea-8ea6-2861ed3ca597.png)
 
